@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+body{
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.profile-card {
+  background-color: hsl(246, 80%, 60%);
+  max-width: 300px;
+  min-width: 350px;
+  height: 350px;
+  padding: 20px;
+  flex: 1 1 300px;
+  border-radius: 10px;
+  position:relative;
+  z-index: 2;
+  margin-left: 30px;
+  margin-bottom: -20px;
+
+
+  .profile-pic {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 90px;
+    border: 3px solid;
+    border-radius: 100px;
+  }
+
+  .profile-text{
+    margin-left: 20px;
+    margin-bottom: -10px;
+    color: #aaa;
+  }
+
+  h1{
+    margin-left: 20px;
+    color: white;
+    font-weight: 300;
+    font-size: 3.5rem;
+  }
+}
+
+.timeframe-card{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    flex: 1 1 300px;
+    padding: 20px 20px;
+    min-width: 350px;
+    max-width: 300px;
+    margin-left: 30px;
+    max-height: 170px;
+    margin-bottom: 20px;
+    z-index: 1;
+
+    .time-filters{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        li{
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            color: hsl(235, 45%, 61%);
+
+            &:hover {
+                color: white;
+            }
+
+            &.active {
+                color: white;   
+            }
+        }
+    }
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    flex: 3;
+    margin-left: 20px;
+
+    .card{
+        color: white;
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 10px;
+        min-width: 200px;
+        padding: 20px;
+        position: relative;
+        margin-left: 10px;
+        z-index: 2;
+
+        .card-title{
+            display: flex;
+            font-size: 18px;
+            justify-content: space-between;
+            align-items: center;
+
+            img {
+                padding: 15px 20px;
+                text-align: right;
+            }
+        }
+
+        .hours {
+            margin: 0;
+            margin-top: 30px;
+            font-size: 3rem;
+        }
+
+        .previous {
+            font-size: 14px;
+            color: hsl(235, 45%, 61%);
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: hsl(235, 46%, 40%);
+        }
+    }
+
+    .back-card{
+        border-radius: 10px;
+        min-width: 200px;
+        height: 60px;
+        margin-bottom: -20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        margin-left: 10px;
+
+        .activity-logo {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 20%;
+            height: auto;
+          
+            @media (max-width: 768px) {
+              width: 25px;
+              top: 8px;
+              right: 8px;
+            }
+          
+            @media (max-width: 480px) {
+              width: 20px;
+              top: 5px;
+              right: 5px;
+            }
+          }
+          
+
+        &.work {
+            background-color: hsl(15, 100%, 70%);
+          }
+          &.play {
+            background-color: hsl(195, 74%, 62%)
+          }
+          &.study {
+            background-color: hsl(348, 100%, 68%);
+          }
+          &.exercise {
+            background-color: hsl(145, 58%, 55%);
+          }
+          &.social {
+            background-color: hsl(264, 64%, 52%);
+          }
+          &.self-care {
+            background-color: hsl(43, 84%, 65%);
+          }
+    }
+}
