@@ -185,3 +185,68 @@ body{
           }
     }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .profile {
+    padding: 15px;
+  }
+
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+  }
+
+  .activity-grid {
+    gap: 15px;
+  }
+
+  .back-card {
+    height: 100px;
+  }
+
+  .card {
+    height: 100px;
+    padding: 10px;
+  }
+
+  .card h1 {
+    font-size: 1.8rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile h1 {
+    font-size: 1rem;
+  }
+
+  .time-filters li {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .back-card {
+    height: 90px;
+  }
+
+  .card {
+    height: 90px;
+    padding: 8px;
+  }
+
+  .card h1 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+
