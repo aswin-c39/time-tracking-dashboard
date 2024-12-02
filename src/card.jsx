@@ -20,6 +20,7 @@ function Card(props){
                 <p className="hours">{props.time}hrs</p>
                 <p className="previous">Last {decideTime()} - {props.previous}hrs</p>
             </div>
+            <p className="about">About {props.heading}: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget metus vel sapien hendrerit tristique.</p>
            </div>
     );
 }

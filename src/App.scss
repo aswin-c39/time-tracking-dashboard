@@ -11,14 +11,15 @@ body{
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .profile-card {
   background-color: hsl(246, 80%, 60%);
   max-width: 300px;
   min-width: 290px;
-  height: 350px;
+  height: 390px;
   padding: 20px;
   flex: 1 1 300px;
   border-radius: 10px;
@@ -101,6 +102,9 @@ body{
         border-radius: 10px;
         min-width: 200px;
         padding: 20px;
+        max-height: 200px;
+        transition: max-height 0.3s ease-in-out; 
+        overflow: hidden;
         position: relative;
         margin-left: 10px;
         z-index: 2;
@@ -128,9 +132,25 @@ body{
             color: hsl(235, 45%, 61%);
         }
 
+        .about{
+            opacity: 0;
+            margin-top: 20px;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s, transform 0.3s ease-in-out;
+          }
+
         &:hover {
             cursor: pointer;
             background-color: hsl(235, 46%, 40%);
+            max-height: 280px;
+            
+            .about{
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0);
+              transition: opacity 0.3s ease-in-out, visibility 0s linear 0s, transform 0.3s ease-in-out;
+            }
         }
     }
 
@@ -186,6 +206,44 @@ body{
     }
 }
 
+@media (max-width: 800px){
+
+
+  .profile-card{
+    max-width: calc(100% - 30px);
+    padding: 20px 10px;
+    margin: 0 15px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .profile-pic {
+      height: 60px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .timeframe-card {
+    max-width: calc(100% - 30px);
+    padding: 20px;
+    margin: -20px 15px 15px; 
+    .time-filters{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
 
 @media (max-width: 480px) {
 
