@@ -315,6 +315,7 @@ body{
     max-width: 100%;
     //padding: 15px;
     margin-left: 35px;
+    margin-right: 20px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -331,6 +332,7 @@ body{
   .timeframe-card {
     max-width: 100%;
     margin-left: 35px;
+    margin-right: 20px;
     .time-filters{
       display: flex;
       flex-direction: row;
@@ -345,7 +347,9 @@ body{
   }
 
   .card {
+
     padding: 15px;
+    margin-right: 20px;
 
     .card-title {
       font-size: 1rem;
