@@ -204,7 +204,6 @@ body{
 
   .timeframe-card {
     max-width: 100%;
-    padding: 15px;
   }
 
   .activity-grid {
@@ -216,6 +215,12 @@ body{
 
     .card-title {
       font-size: 1rem;
+    }
+
+    .card-details{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .hours {
