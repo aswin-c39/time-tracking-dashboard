@@ -186,41 +186,6 @@ body{
     }
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-
-  .profile {
-    padding: 15px;
-  }
-
-  .profile-pic {
-    width: 50px;
-    height: 50px;
-  }
-
-  .activity-grid {
-    gap: 15px;
-  }
-
-  .back-card {
-    height: 100px;
-  }
-
-  .card {
-    height: 100px;
-    padding: 10px;
-  }
-
-  .card h1 {
-    font-size: 1.8rem;
-  }
-
-  .card p {
-    font-size: 0.8rem;
-  }
-}
 
 @media (max-width: 480px) {
   .profile h1 {
@@ -228,6 +193,8 @@ body{
   }
 
   .time-filters li {
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.8rem;
     padding: 5px;
   }
@@ -238,9 +205,14 @@ body{
 
   .card {
     display: flex;
-    flex-direction: row;
-    height: 100px;
+    height: 200px;
     padding: 8px;
+  }
+
+  .card-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card h1 {

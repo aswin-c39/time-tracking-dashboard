@@ -16,10 +16,11 @@ function Card(props){
                 <p>{props.heading}</p>
                 <img src={ellipsis}/>
             </div>
-            
-            <p className="hours">{props.time}hrs</p>
-            <p className="previous">Last {decideTime()} - {props.previous}hrs</p>
-        </div>
+            <div className="card-details">
+                <p className="hours">{props.time}hrs</p>
+                <p className="previous">Last {decideTime()} - {props.previous}hrs</p>
+            </div>
+           </div>
     );
 }
 export default Card
