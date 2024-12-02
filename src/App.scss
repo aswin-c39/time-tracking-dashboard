@@ -237,7 +237,9 @@ body{
   }
 
   .card {
-    height: 90px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
     padding: 8px;
   }
 
