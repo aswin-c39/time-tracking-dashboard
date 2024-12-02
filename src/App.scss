@@ -192,6 +192,7 @@ body{
   .profile-card {
     max-width: 100%;
     padding: 15px;
+    height: auto;
 
     .profile-pic {
       height: 60px;
@@ -204,6 +205,12 @@ body{
 
   .timeframe-card {
     max-width: 100%;
+    margin-right: 30px;
+    .time-filters{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .activity-grid {
@@ -228,7 +235,7 @@ body{
     }
 
     .previous {
-      font-size: 0.7rem;
+      font-size: 1.2rem;
     }
   }
 
