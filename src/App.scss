@@ -1,10 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 
+
 body{
   background-color: hsl(226, 43%, 10%);
   font-family: "Rubik", sans-serif;
-  
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition for body styles */
+
+
+  &.light-mode {
+    background-color: hsl(28, 100%, 88%);
+    color: black;
+
+    .profile-card {
+      background-color: hsl(28, 86%, 71%);
+      color: black;
+
+      .report-for {
+        color: gray;
+      }
+    }
+    
+    .timeframe-card {
+      background-color: hsl(28, 86%, 55%);
+
+      .time-filters {
+        li {
+          color: hsl(28, 86%, 81%);
+
+          &:hover {
+            color: black;
+          }
+
+          &.active {
+            color: black;   
+          }
+        }
+      }
+    }
+
+    .card {
+      background-color: hsl(28, 86%, 55%);
+      color: black;
+
+      .previous {
+        color: hsl(28, 100%, 90%);
+      }
+
+      &:hover {
+        background-color: hsl(28, 86%, 70%);
+
+        .previous {
+          color: hsl(28, 86%, 50%)
+        }
+      }
+    }
+  }
 }
 
 .container{
@@ -47,10 +99,10 @@ body{
 
   h1{
     margin-left: 20px;
-    color: white;
     font-weight: 300;
     font-size: 3.5rem;
   }
+
 }
 
 .timeframe-card{
@@ -88,6 +140,18 @@ body{
         }
     }
 }
+
+.modes {
+  display: flex;
+  justify-content: end;
+
+  .mode-icon{
+    height: 50px;
+    margin: 20px;
+  }
+  
+}
+
 
 .activity-grid {
     display: grid;

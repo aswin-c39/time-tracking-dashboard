@@ -3,6 +3,8 @@ import ProfileCard from './profileCard.jsx'
 import "./App.scss"
 import React, {useState} from 'react'
 import data from "./data.json";
+import lightMode from "./assets/lightmode.png"
+import darkMode from "./assets/darkmode.png"
 
 import workLogo from './assets/work.svg';
 import playLogo from './assets/play.svg';
@@ -14,6 +16,12 @@ import selfCareLogo from './assets/self-care.svg';
 function App() {
 
   const [timeframe, setTimeframe] = useState("weekly");
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  const toggleMode = () => {
+    setIsLightMode(!isLightMode);
+    document.body.className = isLightMode ? "dark-mode" : "light-mode";
+  };
 
   const logoMapping = {
     Work: workLogo,
@@ -26,6 +34,13 @@ function App() {
   };
 
   return (
+    <>
+    <div className='modes'>
+      <img src={isLightMode ? darkMode : lightMode} 
+            className='mode-icon'
+            onClick={toggleMode}></img>
+    </div>
+
     <div className="container">
       <div className="profile">
         <ProfileCard/>
@@ -72,6 +87,7 @@ function App() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
