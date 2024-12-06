@@ -10,7 +10,7 @@ body{
 
 
   &.light-mode {
-    background-color: hsl(28, 100%, 88%);
+    background-color: hsl(28, 100%, 92%);
     color: black;
 
     .profile-card {
@@ -28,7 +28,7 @@ body{
 
       .time-filters {
         li {
-          color: hsl(28, 86%, 81%);
+          color: hsl(28, 100%, 90%);
 
           &:hover {
             color: black;
@@ -50,7 +50,7 @@ body{
       }
 
       &:hover {
-        background-color: hsl(28, 86%, 70%);
+        background-color: hsl(28, 87%, 80%);
 
         .previous {
           color: hsl(28, 86%, 50%)
@@ -170,7 +170,7 @@ body{
         background-color: hsl(235, 46%, 20%);
         border-radius: 10px;
         min-width: 200px;
-        padding: 20px;
+        padding: 25px;
         max-height: 200px;
         transition: max-height 0.3s ease-in-out; 
         overflow: hidden;
